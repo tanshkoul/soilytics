@@ -1,11 +1,7 @@
 import requests
-from requests.auth import HTTPBasicAuth
 import os
 from dotenv import load_dotenv
-from html.parser import HTMLParser
-
-from requests.models import HTTPBasicAuth
-# going to process the requests here
+from requests.api import get
 
 load_dotenv()
 
@@ -19,10 +15,12 @@ headers = {
     'x-api-key':API_KEY,
 }
 
-params = {
-    'lat':'12',
-    'lng':'77',
-}
+def getlatlng(lat: str, lng: str) -> dict:
+    return {
+        'lat':lat,
+        'lng':lng
+    }
+    
 
 def getreq(URL: str, query: dict, headers: dict) -> str:
     data = requests.get(
@@ -44,20 +42,8 @@ def getreq(URL: str, query: dict, headers: dict) -> str:
     }
 
     print(statuses[status])
-    # just output to the console, so we know what's up
 
     return data.text
 
 
-def parse(raw: str) -> str:
-    pass
-
-
-print(var)
-print(type(var))
-    
-# def main():
-#     pass
-
-
-
+print(getreq(BASEURL+endpt, query=getlatlng('41','-74'), headers=headers))
