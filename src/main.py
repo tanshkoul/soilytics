@@ -1,4 +1,1 @@
-import * from .
-
-if __name__ == __main__:
-    main()
+from . import cityconv, GUI, soilreq
