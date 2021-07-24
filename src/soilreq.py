@@ -43,6 +43,3 @@ def getreq(URL: str, query: dict, headers: dict) -> str:
     print(statuses[status])
 
     return data.text
-
-
-print(getreq(BASEURL+endpt, query=getlatlng('41','-74'), headers=headers))
