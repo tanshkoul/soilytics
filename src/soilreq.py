@@ -2,18 +2,15 @@ import requests
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+def prepkey() -> str:
+    
+    load_dotenv()
+    # looks for .env file and loads environment vars
+    API_KEY = os.getenv('API_KEY')
+    
+    return API_KEY 
 
-API_KEY = os.getenv('API_KEY')
-
-BASEURL = 'https://api.ambeedata.com'
-
-endpt = '/soil/latest/by-lat-lng'
-
-headers = {
-    'x-api-key':API_KEY,
-}
-
+# function unnecessary 
 def getlatlng(lat: str, lng: str) -> dict:
     return {
         'lat':lat,
@@ -42,4 +39,4 @@ def getreq(URL: str, query: dict, headers: dict) -> str:
 
     print(statuses[status])
 
-    return data.text
+    return data.json()
