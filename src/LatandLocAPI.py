@@ -7,7 +7,7 @@ def gather(city,country):
 
 
     loc = geolocator.geocode(city + ',' + country)
-    response = requests.get("https://api.openweathermap.org/data/2.5/onecall?lat={}&lon={}&exclude=hourly,daily,current,minutely,alerts&units=metric&appid=8e898272d24992aae37e208b729aaed9".format(loc.latitude,loc.longitude))
+    response = requests.get("https://api.openweathermap.org/data/2.5/onecall?lat={}&lon={}&exclude=hourly,current,minutely,alerts&units=metric&appid=8e898272d24992aae37e208b729aaed9".format(loc.latitude,loc.longitude))
     data=response.json()
 
     a=(f"Latitude is {data['lat']: .2f} and longitude is {data['lon']: .2f}.")
@@ -25,12 +25,17 @@ def gather(city,country):
         'x-api-key':sq.prepkey(),
         'Content-type': "application/json",
     }
-
+    b = ""
+    import datetime 
+    today = datetime.date.today()
+    for i in range(7):
+        b+=(f"Temperature in {city}, {country} on {today + datetime.timedelta(days = i) } is {data['daily'][i]['temp']['day']: .2f} degrees Celsius. There is {data['daily'][i]['weather'][0]['description']}\n")
+    
     response2 = sq.getreq(BASEURL + ENDPT, querystring, headers)
 
     data2 = response2['data'][0]
 
-    b=(f"Soil temperature at {city}, {country} ({data['lat']: .2f}, {data['lon']: .2f}) is {data2['soil_temperature']: .2f} degrees Celsius.")
+    #b=(f"Soil temperature at {city}, {country} ({data['lat']: .2f}, {data['lon']: .2f}) is {data2['soil_temperature']: .2f} degrees Celsius.")
     c=(f"Soil moisture at the same location is {data2['soil_moisture']: .2f}%.")
     s=a+"\n"+b+"\n"+c
     return s
