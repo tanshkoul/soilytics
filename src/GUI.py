@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter.constants import W
+from LatandLocAPI import gather
 class App(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
@@ -63,22 +64,15 @@ class FirstPage(tk.Frame):
         country=tk.Entry(button_frame,font=('Times New Roman',20))
         country.grid(row=2,column=1,pady=5,padx=20)
         def search():
-            from geopy.geocoders import Nominatim
-            geolocator = Nominatim(user_agent="geoapiExercises")
             city1 = str(city.get())
-            country1=str(country.get())
-            loc = geolocator.geocode(city1+',' + country1)
-            L = ['Latitude', 'Longitude']
-            b = ""
-            latitude = str(loc.latitude)
-            longitude = str(loc.longitude)
-            b = L[0]+":-"+latitude+"\n"
-            b = b+L[1]+":-"+longitude
-            display = tk.Text(button_frame, height=10, width=30)
-            display.grid(row=6, column=2)
+            country1 = str(country.get())
+            b=gather(city1,country1)
+            display = tk.Text(button_frame, height=10, width=55)
+            display.grid(row=6, column=1)
             display.insert(tk.END, b)
         user_button=tk.Button(button_frame,text="Click Me",command=search,height=2,width=10)
         user_button.grid(row=4,column=1,pady=5,padx=20)
+
 
 app = App()
 app.mainloop()
