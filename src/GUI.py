@@ -2,10 +2,6 @@ import tkinter as tk
 from tkinter.constants import W
 from LatandLocAPI import gather
 
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
 class App(tk.Tk):
 
     def __init__(self, *args, **kwargs):
@@ -26,10 +22,6 @@ class App(tk.Tk):
         frame = self.frames[page_name]
         frame.tkraise()
 
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
 class MenuPage(tk.Frame):
 
     def __init__(self, parent, controller):
