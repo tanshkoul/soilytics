@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.app {
+    scroll-snap-type: proximity;
+}
+
+/* ----------------------------- NAVBAR ----------------------------------- */
+
+
+.navbar {
+    position: sticky;
+    top:0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: bisque;
+}
+
+.navbrand {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbranditems {
+    display: flex;
+    flex-flow: row nowrap;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 8rem;
+    height: auto;
+}
+
+.name {
+    color: rosybrown;
+    font-size: 3rem;
+    padding-left: 0.5rem;
+}
+
+.menu {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.menulist {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuitem {
+    text-decoration: none;
+    margin: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+    color: grey;
+}
+
+.navauth {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.navauthlist {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.navauthitems {
+    text-decoration: none;
+    margin: 1rem;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.login {
+    background-color: rosybrown;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.signup {
+    background-color: goldenrod;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+
+
+/* ----------------------------- FOOTER ----------------------------------- */
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+}
+
+.columntitle {
+    color: grey;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+.logodiv {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.logofooter {
+    width: 14rem;
+    height: auto;
+    background-color: whitesmoke;
+    padding: 1rem;
+    padding-right: 1rem;
+}
+
+.contact {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1rem;
+}
+
+.contactitems {
+    font-size: 1rem;
+    color: rosybrown;
+    margin: 1rem;
+}
+
+.footermenu {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 1rem;
+}
+
+.footermenulist {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style-type: none;
+}
+
+.footermenuitems {
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 1rem;
+    color: rosybrown;
+}
+
+.credits {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1rem;
+}
+
+.creditslist {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style-type: none;
+}
+
+.creditsitems {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rosybrown;
+    margin: 1rem;
+}
