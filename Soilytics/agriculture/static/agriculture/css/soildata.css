@@ -17,6 +17,7 @@
     color: #bc8f8f;
     font-size: 7rem;
     animation: fade 5 1 ease-in-out fowards;
+    text-align: center;
 }
 
 @keyframes fade {
