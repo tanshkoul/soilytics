@@ -37,6 +37,7 @@ def getreq(URL: str, query: dict, headers: dict) -> str:
         '500':'servers not working man',
     }
 
-    print(statuses[status])
+    # use only if testing the application
+    # print(statuses[status])
 
     return data.json()
