@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter.constants import W
 from LatandLocAPI import gather
 
+
 class App(tk.Tk):
 
     def __init__(self, *args, **kwargs):
@@ -22,6 +23,7 @@ class App(tk.Tk):
         frame = self.frames[page_name]
         frame.tkraise()
 
+
 class MenuPage(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -40,8 +42,9 @@ class MenuPage(tk.Frame):
         def FirstP():
             controller.show_frame("FirstPage")
         show_database = tk.Button(
-        button_frame, text="Click Me", command=FirstP, height=5, width=50)
+            button_frame, text="Click Me", command=FirstP, height=5, width=50)
         show_database.pack()
+
 
 class FirstPage(tk.Frame):
 
@@ -54,28 +57,33 @@ class FirstPage(tk.Frame):
 
         def MenuPage():
             controller.show_frame("MenuPage")
-        button=tk.Button(self,text="Go back...",command=MenuPage,height=2,width=20)
-        button.pack(pady=25,anchor=W)
+        button = tk.Button(self, text="Go back...",
+                           command=MenuPage, height=2, width=20)
+        button.pack(pady=25, anchor=W)
         button_frame = tk.Frame(self, bg='#0BA75B')
         button_frame.pack(fill="both", expand=True)
-        city_label=tk.Label(button_frame,text="Enter City",height=5,width=10,bg="#0ED775")
-        city_label.grid(row=1,column=0,pady=5,padx=20)
-        country_label=tk.Label(button_frame,text="Enter Country",height=5,width=20,bg="#0ED775")
-        country_label.grid(row=2,column=0,pady=5,padx=20)
-        city=tk.Entry(button_frame,font=('Ubuntu',20))
-        city.grid(row=1,column=1,pady=5,padx=20)
-        country=tk.Entry(button_frame,font=('Ubuntu',20))
-        country.grid(row=2,column=1,pady=5,padx=20)
+        city_label = tk.Label(button_frame, text="Enter City",
+                              height=5, width=10, bg="#0ED775")
+        city_label.grid(row=1, column=0, pady=5, padx=20)
+        country_label = tk.Label(
+            button_frame, text="Enter Country", height=5, width=20, bg="#0ED775")
+        country_label.grid(row=2, column=0, pady=5, padx=20)
+        city = tk.Entry(button_frame, font=('Ubuntu', 20))
+        city.grid(row=1, column=1, pady=5, padx=20)
+        country = tk.Entry(button_frame, font=('Ubuntu', 20))
+        country.grid(row=2, column=1, pady=5, padx=20)
 
         def search():
             city1 = str(city.get())
             country1 = str(country.get())
             b = gather(city1, country1)
-            display = tk.Text(button_frame, height=20, width=51)
+            display = tk.Text(button_frame, height=30, width=50)
             display.grid(row=3, column=1)
             display.insert(tk.END, b)
-        user_button=tk.Button(button_frame,text="Click Me",command=search,height=2,width=10)
-        user_button.grid(row=4,column=1,pady=5,padx=20)
+        user_button = tk.Button(
+            button_frame, text="Click Me", command=search, height=2, width=10)
+        user_button.grid(row=4, column=1, pady=5, padx=20)
+
 
 app = App()
 app.mainloop()
