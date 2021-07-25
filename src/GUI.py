@@ -25,15 +25,10 @@ class MenuPage(tk.Frame):
         self.controller.title("")
         self.controller.state('normal')
         headingLabel1 = tk.Label(self, text="Soilytics", font=(
-<<<<<<< HEAD
             'Ubuntu', 45), fg='white', bg='brown')
-=======
-            'Times New Roman', 45), fg='white', bg='black')
->>>>>>> b1551a6fb6f86bdac5de31c1fa3db494a44099b9
         headingLabel1.pack(pady=25)
         space = tk.Label(self, height=4, bg='black')
         space.pack()
-<<<<<<< HEAD
         main_menu = tk.Label(self, text='Main Menu', font=(
             'Ubuntu', 25), fg='white', bg='brown')
         main_menu.pack()
@@ -41,9 +36,6 @@ class MenuPage(tk.Frame):
             'Ubuntu', 25), fg='white', bg='brown', anchor='w')
         selection.pack(fill='x')
         button_frame = tk.Frame(self, bg='brown')
-=======
-        button_frame = tk.Frame(self, bg='black')
->>>>>>> b1551a6fb6f86bdac5de31c1fa3db494a44099b9
         button_frame.pack(fill="both", expand=True)
         def FirstP():
             controller.show_frame("FirstPage")
@@ -51,35 +43,20 @@ class MenuPage(tk.Frame):
         show_database.pack()
 class FirstPage(tk.Frame):
     def __init__(self, parent, controller):
-<<<<<<< HEAD
         tk.Frame.__init__(self, parent, bg='#0ED775')
         self.controller = controller
         headingLabel1 = tk.Label(self, text="Soilytics", font=(
             'Ubuntu', 45), fg='white', bg='#0BA75B')
-=======
-        tk.Frame.__init__(self, parent, bg='black')
-        self.controller = controller
-        headingLabel1 = tk.Label(self, text="Soilytics", font=(
-            'Times New Roman', 45), fg='white', bg='black')
->>>>>>> b1551a6fb6f86bdac5de31c1fa3db494a44099b9
         headingLabel1.pack(pady=25)
         def MenuPage():
             controller.show_frame("MenuPage")
         button=tk.Button(self,text="<-----",command=MenuPage,height=2,width=20)
         button.pack(pady=25,anchor=W)
-<<<<<<< HEAD
         button_frame = tk.Frame(self, bg='#0BA75B')
         button_frame.pack(fill="both", expand=True)
         city_label=tk.Label(button_frame,text="Enter City",height=5,width=10,bg="#0ED775")
         city_label.grid(row=1,column=0,pady=5,padx=20)
         country_label=tk.Label(button_frame,text="Enter Country",height=5,width=20,bg="#0ED775")
-=======
-        button_frame = tk.Frame(self, bg='black')
-        button_frame.pack(fill="both", expand=True)
-        city_label = tk.Label(button_frame, text="Enter City",height=5, width=10, bg="black", fg="white")
-        city_label.grid(row=1,column=0,pady=5,padx=20)
-        country_label=tk.Label(button_frame,text="Enter Country",height=5,width=20,bg="black",fg="white")
->>>>>>> b1551a6fb6f86bdac5de31c1fa3db494a44099b9
         country_label.grid(row=2,column=0,pady=5,padx=20)
         city=tk.Entry(button_frame,font=('Ubuntu',20))
         city.grid(row=1,column=1,pady=5,padx=20)
