@@ -79,3 +79,6 @@ class FirstPage(tk.Frame):
             display.insert(tk.END, b)
         user_button=tk.Button(button_frame,text="Click Me",command=search,height=2,width=10)
         user_button.grid(row=4,column=1,pady=5,padx=20)
+
+app = App()
+app.mainloop()
