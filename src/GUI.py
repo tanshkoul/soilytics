@@ -28,7 +28,7 @@ class MenuPage(tk.Frame):
         tk.Frame.__init__(self, parent, bg="brown")
         self.controller = controller
         self.controller.title("")
-        self.controller.state('normal')
+        self.controller.state('zoom')
         headingLabel1 = tk.Label(self, text="Soilytics", font=(
             'Ubuntu', 45), fg='white', bg='brown')
         headingLabel1.pack(pady=25)
@@ -71,8 +71,8 @@ class FirstPage(tk.Frame):
             city1 = str(city.get())
             country1 = str(country.get())
             b = gather(city1, country1)
-            display = tk.Text(button_frame, height=10, width=55)
-            display.grid(row=6, column=1)
+            display = tk.Text(button_frame, height=20, width=51)
+            display.grid(row=3, column=1)
             display.insert(tk.END, b)
         user_button=tk.Button(button_frame,text="Click Me",command=search,height=2,width=10)
         user_button.grid(row=4,column=1,pady=5,padx=20)
