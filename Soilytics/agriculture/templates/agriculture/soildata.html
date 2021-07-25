@@ -1,0 +1,70 @@
+{% extends "agriculture/index.html" %}
+
+{% load static %}
+{% load widget_tweaks %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'agriculture/css/soildata.css' %}">
+    <!-- <script src="{% static 'agriculture/js/maps.js' %}"></script> -->
+{% endblock css %}
+
+
+{% block content %}
+    <div class="main">
+        <div class="title">
+            <h1 class="text">Checking an area's soil data</h1>   
+        </div>
+        <div class="maps">
+            <h1 class="headerone">1. Choose a location</h1>
+            <iframe
+                width="600"
+                height="450"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC2IzaRmvsYa05OHcJd9qAZIWp76zVbfis
+                    &q=Space+Needle,Seattle+WA">
+            </iframe>
+        </div>
+        <div class="input">
+            <h1 class="headertwo">2. Figure out the soil data</h1>
+            <div class="form">
+                <form method="GET" class="center">
+                    <div class="userinput">
+                        {{ form.city|add_class:'forminput formtext' }}
+                        {{ form.country|add_class:'forminput formtext' }}
+                    </div>
+                    <button type="submit" class="submitbtn">Submit</button>
+                </form>
+            </div>
+            {% if result %}
+                <div class=result>
+                    {% for i in result %}
+                        <p>{{i}}</p>
+                        <br>
+                    <!-- {{ result }}} -->
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <!-- <div class="form">
+                <form method="GET" class="center">
+                    <div class="userinput">
+                        <label for="city" class="formtext">Enter the city:</label><br>
+                        <input type="text" class="forminput" name="city" size="50"><br>
+                        <label for="country" class="formtext">Enter the country:</label><br>
+                        <input type="text" class="forminput" name="country" size="50"><br>
+                    </div>
+                    <input type="submit" value="Submit" class="submitbtn" size="50">
+                </form>
+            </div> -->
+        </div>
+    </div>
+    <!-- <div id="map"></div> -->
+{% endblock content %}
+
+<!-- {% block js %}
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2IzaRmvsYa05OHcJd9qAZIWp76zVbfis&callback=initMap&libraries=&v=weekly"
+    async
+></script>
+{% endblock js%} -->
