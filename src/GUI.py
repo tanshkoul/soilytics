@@ -24,17 +24,17 @@ class MenuPage(tk.Frame):
         tk.Frame.__init__(self, parent, bg="brown")
         self.controller = controller
         self.controller.title("")
-        self.controller.state('zoomed')
+        self.controller.state('normal')
         headingLabel1 = tk.Label(self, text="Soilytics", font=(
-            'Times New Roman', 45), fg='white', bg='brown')
+            'Ubuntu', 45), fg='white', bg='brown')
         headingLabel1.pack(pady=25)
         space = tk.Label(self, height=4, bg='brown')
         space.pack()
         main_menu = tk.Label(self, text='Main Menu', font=(
-            'Times New Roman', 25), fg='white', bg='brown')
+            'Ubuntu', 25), fg='white', bg='brown')
         main_menu.pack()
         selection = tk.Label(self, text='Please make a selection', font=(
-            'Times New Roman', 25), fg='white', bg='brown', anchor='w')
+            'Ubuntu', 25), fg='white', bg='brown', anchor='w')
         selection.pack(fill='x')
         button_frame = tk.Frame(self, bg='brown')
         button_frame.pack(fill="both", expand=True)
@@ -44,24 +44,24 @@ class MenuPage(tk.Frame):
         show_database.grid(row=0,column=0,pady=5)
 class FirstPage(tk.Frame):
     def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent, bg='brown')
+        tk.Frame.__init__(self, parent, bg='#0ED775')
         self.controller = controller
         headingLabel1 = tk.Label(self, text="Soilytics", font=(
-            'Times New Roman', 45), fg='white', bg='brown')
+            'Ubuntu', 45), fg='white', bg='#0BA75B')
         headingLabel1.pack(pady=25)
         def MenuPage():
             controller.show_frame("MenuPage")
         button=tk.Button(self,text="<-----",command=MenuPage,height=2,width=20)
         button.pack(pady=25,anchor=W)
-        button_frame = tk.Frame(self, bg='brown')
+        button_frame = tk.Frame(self, bg='#0BA75B')
         button_frame.pack(fill="both", expand=True)
-        city_label=tk.Label(button_frame,text="Enter City",height=5,width=10,bg="brown")
+        city_label=tk.Label(button_frame,text="Enter City",height=5,width=10,bg="#0ED775")
         city_label.grid(row=1,column=0,pady=5,padx=20)
-        country_label=tk.Label(button_frame,text="Enter Country",height=5,width=20,bg="brown")
+        country_label=tk.Label(button_frame,text="Enter Country",height=5,width=20,bg="#0ED775")
         country_label.grid(row=2,column=0,pady=5,padx=20)
-        city=tk.Entry(button_frame,font=('Times New Roman',20))
+        city=tk.Entry(button_frame,font=('Ubuntu',20))
         city.grid(row=1,column=1,pady=5,padx=20)
-        country=tk.Entry(button_frame,font=('Times New Roman',20))
+        country=tk.Entry(button_frame,font=('Ubuntu',20))
         country.grid(row=2,column=1,pady=5,padx=20)
         def search():
             city1 = str(city.get())
