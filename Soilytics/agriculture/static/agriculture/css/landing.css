@@ -1,0 +1,206 @@
+.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    scroll-snap-type: proximity;
+}
+
+/* ----------------------------- FIRST PAGE ----------------------------------- */
+
+.firstpage {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 85vh;
+    background-color: bisque;
+    scroll-snap-align: center;
+}
+
+.image {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.image1 {
+    width: 40rem;
+    height: auto;
+}
+
+.headers {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.firstheader {
+    color: orange;
+    font-size: 7rem;
+    margin: 1rem;
+}
+
+.secondheader {
+    color: green;
+    font-size: 7rem;
+    margin: 1rem;
+}
+
+.thirdheader {
+    color: crimson;
+    font-size: 7rem;
+    margin: 1rem;
+}
+
+/* ----------------------------- SECOND PAGE ----------------------------------- */
+
+.secondpage {
+    /* height: 100vh; */
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    scroll-snap-align: center;
+}   
+
+.firstnumber {
+    font-size: 10rem;
+    color: rosybrown;
+}
+
+.firsttitle {
+    font-size: 5rem;
+    color:bisque;
+}
+
+.firsttext {
+    color: white;
+    font-size: 2rem;
+    margin: 3rem 20rem;
+    padding: 2rem;
+    background-color: rosybrown;
+    border: 0.1rem solid white;
+    border-radius: 1.5rem;
+}
+
+.image2 {
+    width: 8rem;
+    height: auto;
+    margin: 1rem;
+}
+
+/* ----------------------------- THIRD PAGE ----------------------------------- */
+
+.thirdpage {
+    /* height: 100vh; */
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    scroll-snap-align: center;
+}   
+
+.secondnumber {
+    font-size: 10rem;
+    color: orange;
+}
+
+.secondtitle {
+    font-size: 5rem;
+    color:bisque;
+}
+
+.secondtext {
+    color: white;
+    font-size: 2rem;
+    margin: 3rem 20rem;
+    padding: 2rem;
+    background-color: orange;
+    border: 0.1rem solid white;
+    border-radius: 1.5rem;
+}
+
+.image3 {
+    width: 8rem;
+    height: auto;
+    margin: 1rem;
+}
+
+/* ----------------------------- FOURTH PAGE ----------------------------------- */
+
+.fourthpage {
+    /* height: 100vh; */
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    scroll-snap-align: center;
+}   
+
+.thirdnumber {
+    font-size: 10rem;
+    color: crimson;
+}
+
+.thirdtitle {
+    font-size: 5rem;
+    color:bisque;
+}
+
+.thirdtext {
+    color: white;
+    font-size: 2rem;
+    margin: 3rem 20rem;
+    padding: 2rem;
+    background-color: crimson;
+    border: 0.1rem solid white;
+    border-radius: 1.5rem;
+}
+
+.image4 {
+    width: 8rem;
+    height: auto;
+    margin: 1rem;
+}
+
+/* ----------------------------- FIFTH PAGE ----------------------------------- */
+
+.fifthpage {
+    /* height: 100vh; */
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    scroll-snap-align: center;
+}   
+
+.fourthnumber {
+    font-size: 10rem;
+    color: green;
+}
+
+.fourthtitle {
+    font-size: 5rem;
+    color:bisque;
+}
+
+.fourthtext {
+    color: white;
+    font-size: 2rem;
+    margin: 3rem 20rem;
+    padding: 2rem;
+    background-color: green;
+    border: 0.1rem solid white;
+    border-radius: 1.5rem;
+}
+
+.image5 {
+    width: 8rem;
+    height: auto;
+    margin: 1rem;
+}

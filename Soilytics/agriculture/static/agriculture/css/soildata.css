@@ -1,0 +1,131 @@
+.main {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.title {
+    background-color: bisque;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 85vh;
+    width: auto;
+    justify-content: center;
+    align-items: center; 
+}
+
+.text {
+    color: #bc8f8f;
+    font-size: 7rem;
+    animation: fade 5 1 ease-in-out fowards;
+    text-align: center;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        font-size: 0rem;
+    }
+
+    100% {
+        opacity: 100;
+        font-size: 5rem;
+    }
+}
+
+.maps {
+    background-color: whitesmoke;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerone {
+    color: orange;
+    font-size: 5rem;
+    margin: 1rem;
+}
+
+.maps iframe {
+    width: 50vw;
+    height: 70vh;
+    margin: 1rem;
+}
+
+.input {
+    background-color: #ffe4c4;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.headertwo {
+    color: crimson;
+    font-size: 5em;
+    margin: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    margin: 2rem;
+}
+
+.form form {
+    width: 100%;
+}
+
+.userinput {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.formtext {
+    color: rosybrown;
+    font-size: 2rem;
+}
+
+.forminput {
+    border-radius: 1.5rem;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.center {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-self: center;
+    align-items: center;
+}
+
+.submitbtn {
+    margin: 3rem 2rem 2rem 2rem;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 1.5rem;
+    background-color: rosybrown;
+    border: none;
+    border-radius: 1.5rem;
+    transition: background-color 1s, color 1s;
+}
+
+.submitbtn:hover {
+    cursor: pointer;
+    background-color: black;
+    color: rosybrown;
+}
+
+.result {
+    background-color: rosybrown;
+    border: 0.2rem solid white;
+    border-radius: 1.5rem;
+    margin: 2rem 4rem;
+    padding: 2rem;
+    color: black;
+    font-size: 1rem;
+}

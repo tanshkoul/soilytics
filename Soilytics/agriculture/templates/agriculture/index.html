@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soilytics</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'agriculture/css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'agriculture/css/soildata.css' %}">
+    {% block css %} 
+    {% endblock css %}
+</head>
+<body>
+    <div class="app">
+        <nav class="navbar">
+            <div class="navbrand">
+                <a href="{% url 'home'%}" class="navbranditems">
+                    <img src="{% static 'agriculture/images/logo.png' %}" alt="soilytics" class="logo">
+                    <h1 class="name">soilytics</h1>
+                </a>
+            </div>
+            <div class="menu">
+                <ul class="menulist">
+                    <a href="{% url 'home'%}" class="menuitem">
+                        <li>Home</li>
+                    </a>
+                    <a href="{% url 'soil-data'%}" class="menuitem">
+                        <li>Soil Data</li>
+                    </a>
+                    <a href="{% url 'plant-data'%}" class="menuitem">
+                        <li>Planatasium</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="navauth">
+                <ul class="navauthlist">
+                    <a href="" class="login navauthitems">
+                        <li>Login</li>
+                    </a>
+                    <a href="" class="signup navauthitems">
+                        <li>Sign Up</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+
+        {% block content %}
+        {% endblock content %}
+
+        <footer class="footer">
+            <div class="logodiv">
+                <img src="{% static 'agriculture/images/logo.png' %}" alt="soilytics" class="logofooter">
+            </div>
+            <div class="contact">
+                <h1 class="columntitle">Contact</h1>
+                <p class="contactitems">Name</p>
+                <p class="contactitems">Address</p>
+                <p class="contactitems">Number</p>
+                <p class="contactitems">Email</p>
+            </div>
+            <div class="footermenu">
+                <ul class="footermenulist">
+                    <h1 class="columntitle">Menu</h1>
+                    <a href="{% url 'home'%}" class="footermenuitems">
+                        <li>Home</li>
+                    </a>
+                    <a href="{% url 'soil-data'%}" class="footermenuitems">
+                        <li>Soil Data</li>
+                    </a>
+                    <a href="{% url 'plant-data'%}" class="footermenuitems">
+                        <li>Planatasium</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="credits">
+                <h1 class="columntitle">Credits</h1>
+                <ul class="creditslist">
+                    <a href="https://www.vecteezy.com/free-vector/soil-logo" class="creditsitems"><li>Soil Logo Vectors by Vecteezy</li></a>
+                    <a href="https://www.vecteezy.com/free-vector/soil-logo" class="creditsitems"><li>Soil Logo Vectors by Vecteezy</li></a>
+                    <a href="https://www.vecteezy.com/free-vector/soil-logo" class="creditsitems"><li>Soil Logo Vectors by Vecteezy</li></a>
+                    <a href="https://www.vecteezy.com/free-vector/soil-logo" class="creditsitems"><li>Soil Logo Vectors by Vecteezy</li></a>
+                    <a href="https://www.vecteezy.com/free-vector/soil-logo" class="creditsitems"><li>Soil Logo Vectors by Vecteezy</li></a>
+
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    {% block js %}{% endblock js%}
+</body>
+</html>
