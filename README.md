@@ -1,5 +1,6 @@
 # Soilytics
-HackTable Project
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/BsbA8txLjGo/0.jpg)](https://youtu.be/BsbA8txLjGo)
+
 
 ## Installation
 For the Tkinter version of our app, `python3` is required on your system to run. You can download all the necessary pip packages from there with `pip install -r requirements.txt`. After this runs and finishes, run our GUI program with running `python3 src/GUI.py`.
