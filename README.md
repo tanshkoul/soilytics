@@ -1,5 +1,5 @@
 # Soilytics
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/BsbA8txLjGo/0.jpg)](https://youtu.be/BsbA8txLjGo)
+https://devpost.com/software/soilytics
 
 
 ## Installation
